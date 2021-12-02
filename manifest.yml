@@ -1,0 +1,18 @@
+modules:
+  confluence:spacePage:
+    - key: custom-ui-trial-hello-world
+      resource: main
+      resolver:
+        function: resolver
+      title: custom-ui-trial
+      route: hello-world
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
+    tunnel:
+      port: 3000
+app:
+  id: ari:cloud:ecosystem::app/fe02d325-0a2a-4f41-b759-d100c3d798a1
